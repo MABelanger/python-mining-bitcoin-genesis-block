@@ -70,6 +70,21 @@ def print_number_of_try():
     sys.stdout.write('%s\r' % info_str)
     sys.stdout.flush()
 
+def print_solution_found(header_second_hash_big_endian_hex, TARGET):
+    print('')
+    print('!!!We found a perfect header combinaison!!!')
+    print('because the hash of the header is:  ' + header_second_hash_big_endian_hex)
+    print('and is smaller than the target:     ' + TARGET)
+
+def print_header(version, prev_block, merkle_root, timestamp, size_bits, nonce):
+    print('Base on the header:')
+    print('  version: ' + version)
+    print('  prev_block: ' + prev_block)
+    print('  merkle_root: ' + merkle_root)
+    print('  timestamp: ' + timestamp)
+    print('  size_bits: ' + size_bits)
+    print('  nonce: ' + nonce)
+
 is_solution_found = False
 while not is_solution_found:
     # We loop until the solution is found...
@@ -88,11 +103,6 @@ while not is_solution_found:
 
     if not is_solution_found:
         number_of_try = number_of_try + 1
-
     else :
-        print('')
-        print('#######')
-        print('We win the block, the solution is found!!!')
-        print('the hash of the block is:        ' + header_second_hash_big_endian_hex)
-        print('and is smaller thant the target: ' + TARGET)
-        print('#######')
+        print_solution_found(header_second_hash_big_endian_hex, TARGET)
+        print_header(version, prev_block, merkle_root, timestamp, size_bits, nonce)
