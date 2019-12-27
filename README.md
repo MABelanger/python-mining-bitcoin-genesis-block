@@ -31,9 +31,9 @@ You can browse the fist block at [blockchair](https://blockchair.com/bitcoin/blo
 | size_bits | when the new transactions is added to the memory pool |
 | nonce | with the random generator |
 
-## Complete mined genesis block
+## Print the hexadecimal data block
 
-If you have the bitcoin-qt wallet look all the blockchain inside the folder blocks. The path differ from the os.
+If you have the bitcoin-qt wallet you can take a look of all the blockchain inside the folder blocks. The path differ from the os.
 
 | OS | path of the blocks |
 | ------ | ------ |
@@ -41,6 +41,7 @@ If you have the bitcoin-qt wallet look all the blockchain inside the folder bloc
 | MacOS | ~/Library/Application\ Support/Bitcoin/blocks |
 | Windows | %APPDATA%\Bitcoin\blocks |
 
+## To print the fist mined block
 ```
 $ hexdump -C -n 293 blk00000.dat
 
@@ -65,8 +66,8 @@ $ hexdump -C -n 293 blk00000.dat
 00000120  ac 00 00 00 00                                    |.....|
 00000125
 ```
-## First Complete mined 3 block
 
+## To print the fist 3 mined blocks
 ```
 $ hexdump -C  -n 739 blk00000.dat
 
