@@ -1,4 +1,4 @@
-# Bitcoin Mining in Python
+# Bitcoin Mining Genesis Block in Python
 A Python implementation of the Bitcoin mining algorithm
 
 This small script is a pseudo-simulation of the Bitcoin Genesis block mining process.
