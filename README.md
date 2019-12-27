@@ -11,7 +11,7 @@ It take approximately 5 second on average computer to find the solution.
 
 In the real circumstance the header has 4 variables that change between the 10 minutes average window. The variables is :  **merkle_root, timestamp, size_bits and nonce**. So the code do not reflect the reality because in that case only the nonce is changing but it's easier to understand and enable to find the same parameter of the first mining block header.
 
-| Variable | circumstance change |
+| Variable | circumstance of change |
 | ------ | ------ |
 | merkle_root | when the new transactions is added to the memory pool, the merkle root is recalculated |
 | timestamp | when the second change (the Epoch) |
