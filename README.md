@@ -9,8 +9,7 @@ Please note for the academic purpose, all the header is fixed and only the nonce
 In that example, the nonce start at 2083000000 so we need to increment by one, 236893 times to get the magic nonce of 2083236893.
 It take approximately 5 second on average computer to find the solution.
 
-In the real circumstance the header has 4 variables that change between the 10 minutes average window. The variables is :  **merkle_root, timestamp, size_bits and nonce**. So the code do not reflect the reality because in that case only the nonce is changing but it's easier to understand and enable to find the same parameter of the first mining block header.
-
+In the real circumstance the header has 4 variables that can change between the 10 minutes average window. The variables is :  **merkle_root, timestamp, size_bits and nonce**. So the code do not reflect the reality because in that case only the nonce is changing but it's easier to understand and enable to find the same parameter of the first mining block header.
 
 In case that the block contain only one transaction, the merkle_root is equal to the hash of the transaction. It was the case of the first mining block. The list of tx was only one transaction. The one that send the coinbase reward 50BTC to the adress `1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`
 
@@ -23,6 +22,7 @@ So the tx expressed in little Indian is (reverse order) is equal to the merkle_r
 ```
 3ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a
 ```
+You can browse the fist block at [blockchair](https://blockchair.com/bitcoin/block/0)
 
 | Variable | circumstance of change |
 | ------ | ------ |
