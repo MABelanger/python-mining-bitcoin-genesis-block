@@ -41,7 +41,7 @@ If you have the bitcoin-qt wallet you can take a look of all the blockchain insi
 | MacOS | ~/Library/Application\ Support/Bitcoin/blocks |
 | Windows | %APPDATA%\Bitcoin\blocks |
 
-## To print the fist mined block
+## To print the fist mined block (first 293 bytes)
 ```
 $ hexdump -C -n 293 blk00000.dat
 
@@ -67,7 +67,7 @@ $ hexdump -C -n 293 blk00000.dat
 00000125
 ```
 
-## To print the fist 3 mined blocks
+## To print the fist 3 mined blocks (first 739 bytes)
 ```
 $ hexdump -C  -n 739 blk00000.dat
 
