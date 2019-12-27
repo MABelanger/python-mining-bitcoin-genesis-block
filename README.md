@@ -11,6 +11,15 @@ It take approximately 5 second on average computer to find the solution.
 
 In the real circumstance the header has 4 variables that change between the 10 minutes average window. The variables is :  **merkle_root, timestamp, size_bits and nonce**. So the code do not reflect the reality because in that case only the nonce is changing but it's easier to understand and enable to find the same parameter of the first mining block header.
 
+
+In case that the block contain only one transaction, the merkle_root is equal to the hash of the transaction. It was the case of the first mining block. The list of tx was only one transaction.
+
+```js
+tx: [
+  "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"
+],
+```
+
 | Variable | circumstance of change |
 | ------ | ------ |
 | merkle_root | when the new transactions is added to the memory pool, the merkle root is recalculated |

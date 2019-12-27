@@ -1,23 +1,24 @@
-## get info for a specific block (geneis block)
+## get info for a specific block (genesis block)
 ```
 bitcoin-cli getblock 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
 ```
 
-## python mining header
+## python mining header (genesis block)
 ```
 >>> import hashlib
 >>> header_hex = ("01000000" +
- "81cd02ab7e569e8bcd9317e2fe99f2de44d49ab2b8851ba4a308000000000000" +
- "e320b6c2fffc8d750423db8b1eb942ae710e951ed797f7affc8892b0f1fc122b" +
- "c7f5d74d" +
- "f2b9441a" +
- "42a14695")
+ "0000000000000000000000000000000000000000000000000000000000000000" +
+ "3ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a" +
+ "29ab5f49" +
+ "ffff001d" +
+ "1dac2b7c")
 >>> header_bin = header_hex.decode('hex')
 >>> hash = hashlib.sha256(hashlib.sha256(header_bin).digest()).digest()
 >>> hash.encode('hex_codec')
-'1dbd981fe6985776b644b173a4d0385ddc1aa2a829688d1e0000000000000000'
+'6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000'
+
 >>> hash[::-1].encode('hex_codec')
-'00000000000000001e8d6829a8a21adc5d38d0a473b144b6765798e61f98bd1d'
+'000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'
 ```
 
 ## calc Merkle Root transaction Pizza
