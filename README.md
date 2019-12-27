@@ -17,7 +17,7 @@ In case that the block contain only one transaction, the merkle_root is equal to
 ```js
 tx: [
   "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"
-],
+]
 ```
 so the tx expressed in little Indian is :
 ```
